@@ -60,7 +60,7 @@ const ListTodos = () => {
               <td>
                 <button
                   className="btn btn-danger"
-                  onClick={(e) => deleteTodo(todo.todo_id)}
+                  onClick={() => deleteTodo(todo.todo_id)}
                 >
                   Delete
                 </button>
