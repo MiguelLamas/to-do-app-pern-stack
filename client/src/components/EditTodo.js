@@ -33,7 +33,7 @@ data-bs-target={`#id${todo.todo_id}`}>
   Edit
 </button>
 
-<div className="modal" id={`id${todo.todo_id}`} onClick={() => setDescription(todo.description)}>
+<div className="modal fade" id={`id${todo.todo_id}`} onClick={(e) => setDescription(todo.description)}>
   <div className="modal-dialog">
     <div className="modal-content">
       <div className="modal-header">
@@ -46,7 +46,7 @@ data-bs-target={`#id${todo.todo_id}`}>
         className="form-control" 
         value={description} 
         onChange={e => setDescription(e.target.value)}
-        onClick={() => setDescription(todo.description)}
+        onClick={(e) => setDescription(todo.description)}
          />
       </div>
 
@@ -54,11 +54,15 @@ data-bs-target={`#id${todo.todo_id}`}>
       <button type="button" 
       className="btn btn-warning" 
       data-bs-dismiss="modal" 
-      onClick={e => updateDescription(e)}
+      onClick={(e) => updateDescription(e)}
       >
       Edit
       </button>
-        <button type="button" className="btn btn-danger" data-bs-dismiss="modal" onClick={() => setDescription(todo.description)}>
+        <button 
+        type="button" 
+        className="btn btn-danger" 
+        data-bs-dismiss="modal" 
+        onClick={(e) => setDescription(todo.description)}>
         Close
         </button>
       </div>

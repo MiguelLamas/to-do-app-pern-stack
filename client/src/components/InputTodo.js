@@ -13,7 +13,9 @@ const InputTodo = () => {
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(body)
             });
-            window.location = "/"; //refreshes the page to show the new todo
+
+            window.location = "/";
+            
         } catch (err) {
             console.error(err.message);
         }
