@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "node index.js",
-    "build": "npm install && npm run build"
+    "build": "cd client && npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
