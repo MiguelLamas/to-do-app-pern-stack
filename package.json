@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "16.17.1",
+    "npm": "8.15.0"
+  },
   "scripts": {
     "start": "node index.js",
     "build": "cd client && npm install && npm run build"
