@@ -2,11 +2,24 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const pool = require("./db");
-const port = 5000;
+const path = require("path");
+const PORT = process.env.PORT || 5000;
+
+//process.env.PORT
+//process.env.NODE_ENV => production or undefined
+
+
+
 
 // middleware
 app.use(express.json()); // giving us access to req.body so we can get JSON Data.
 app.use(cors());
+
+if (process.env.NODE_ENV === "production") {
+  //server static content
+  //npm run build
+  app.use(express.static(path.join(__dirname, "client/build"))
+}
 
 // ROUTES //
 
@@ -77,4 +90,4 @@ app.delete("/todos/:id", async (req, res) => {
   }
 });
 
-app.listen(port, () => console.log(`Server is running on port ${port}`));
+app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
