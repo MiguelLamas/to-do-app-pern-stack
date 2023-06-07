@@ -31,7 +31,7 @@ A simple Todo App built with the PERN stack combining PERN technologies, so they
 
 ## Deployed with:
 
-* Deployed using ....
+* Deployed using Render (PostgreSQL Database, Backend Webservice & Frontend Static Site)
 
 ## Project Setup & Running:
 
